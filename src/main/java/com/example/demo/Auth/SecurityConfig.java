@@ -2,7 +2,6 @@ package com.example.demo.Auth;
 
 import jakarta.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -25,9 +24,9 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable()) 
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/patrimonio/**").authenticated()
-                .requestMatchers("/transferencia/**").authenticated() 
-                .requestMatchers("/checklist/**").authenticated() 
+                .requestMatchers("/proprietarios/**").authenticated()
+                // .requestMatchers("/transferencia/**").authenticated() 
+                // .requestMatchers("/checklist/**").authenticated() 
                 .anyRequest().permitAll()                  
             )
             .httpBasic(basic -> basic.authenticationEntryPoint(authenticationEntryPoint())); 

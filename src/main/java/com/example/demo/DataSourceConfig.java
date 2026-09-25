@@ -47,9 +47,9 @@ public class DataSourceConfig {
     public DataSource secondaryDataSource() {
         HikariDataSource ds = new HikariDataSource();
         // String url = env.get("POSTGRES_DB_URL", "jdbc:postgresql://db:5432/checklist");
-        String url = env.get("POSTGRES_DB_URL", "jdbc:postgresql://localhost:5432/checklist");
-        String user = env.get("POSTGRES_USER", "checklist");
-        String pass = env.get("POSTGRES_PASS", "checklist");
+        String url = env.get("POSTGRES_DB_URL", "jdbc:postgresql://localhost:5432/isoja");
+        String user = env.get("POSTGRES_USER", "isoja");
+        String pass = env.get("POSTGRES_PASS", "isoja");
 
         ds.setJdbcUrl(url);
         ds.setUsername(user);
