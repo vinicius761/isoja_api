@@ -70,7 +70,7 @@ public class ProprietarioRepository {
         jdbcTemplate.update(sql, params, keyHolder, new String[]{"id"});
 
         if (keyHolder.getKey() != null) {
-            proprietario.setIdProprietario(keyHolder.getKey().intValue());
+            proprietario.setId(keyHolder.getKey().intValue());
         }
 
         return proprietario;

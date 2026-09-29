@@ -8,9 +8,7 @@ public class Proprietario {
     private String telefone;
     private String email;
 
-    public Proprietario() {
-    }
-
+  
     public Proprietario(Integer id, String nome, String cpfCnpj, String telefone, String email) {
         this.id = id;
         this.nome = nome;
@@ -19,11 +17,11 @@ public class Proprietario {
         this.email = email;
     }
 
-    public Integer getIdProprietario() {
+    public Integer getId() {
         return id;
     }
 
-    public void setIdProprietario(Integer id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
